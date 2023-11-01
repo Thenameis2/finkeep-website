@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Accounting - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Finkeep</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -17,6 +17,12 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
     <link rel="stylesheet" href="css/animate.css" />
 
@@ -26,79 +32,102 @@
 
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+
+      .faq-item {
+        margin-bottom: 20px;
+      }
+
+      .faq-question {
+        background-color: #007bff;
+        color: white;
+        border-radius: 30px;
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .faq-question:hover {
+        background-color: darkblue;
+      }
+
+      /* Adjusted the font size for better readability */
+      .faq-question h2 {
+        color: whitesmoke;
+        font-size: 16px;
+        margin: 0;
+      }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+
+      .faq-answer.show {
+        max-height: 1000px; /* Adjust the value based on your content height */
+        transition: max-height 0.3s ease-in;
+      }
+
+      .card-body {
+        padding: 15px;
+      }
+
+      /* Add your animation styles here */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .form-consultation {
+        max-width: 400px;
+        margin: auto;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: #024294; /* Highlight border color on focus */
+      }
+
+      /* Updated the background color for the submit button */
+      .form-control[type="submit"] {
+        background-color: #024294;
+        color: white;
+        cursor: pointer;
+      }
+      .navbar-scrolled {
+        background: white; /* Change to the desired color */
+        transition: background-color 0.3s ease; /* Smooth transition effect */
+      }
+    </style>
   </head>
   <body>
-    <div class="wrap">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="bg-wrap" style="background-color: blue;">
-              <div class="row">
-                <div class="col-md-6 d-flex align-items-center">
-                  <p class="mb-0 phone pl-md-2">
-                    <a href="#" class="mr-2"
-                      ><span class="fa fa-phone mr-1"></span> +91 9823197963</a
-                    >
-                    <a href="#"
-                      ><span class="fa fa-paper-plane mr-1"></span>
-                      sales@finkeep.in</a
-                    >
-                  </p>
-                </div>
-                <div class="col-md-6 d-flex justify-content-md-end">
-                  <div class="social-media">
-                    <p class="mb-0 d-flex">
-                      <a
-                        href="#"
-                        class="d-flex align-items-center justify-content-center"
-                        ><span class="fa fa-facebook"
-                          ><i class="sr-only">Facebook</i></span
-                        ></a
-                      >
-                      <a
-                        href="#"
-                        class="d-flex align-items-center justify-content-center"
-                        ><span class="fa fa-twitter"
-                          ><i class="sr-only">Twitter</i></span
-                        ></a
-                      >
-                      <a
-                        href="#"
-                        class="d-flex align-items-center justify-content-center"
-                        ><span class="fa fa-instagram"
-                          ><i class="sr-only">Instagram</i></span
-                        ></a
-                      >
-                      <a
-                        href="#"
-                        class="d-flex align-items-center justify-content-center"
-                        ><span class="fa fa-dribbble"
-                          ><i class="sr-only">Dribbble</i></span
-                        ></a
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <nav
-      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light sticky-top"
       id="ftco-navbar"
     >
       <div class="container">
         <a class="navbar-brand" href="index.html">Finkeep</a>
-        <!-- <form action="#" class="searchform order-sm-start order-lg-last">
-          <div class="form-group d-flex">
-            <input type="text" class="form-control pl-3" placeholder="Search" />
-            <button type="submit" placeholder="" class="form-control search">
-              <span class="fa fa-search"></span>
-            </button>
-          </div>
-        </form> -->
         <button
           class="navbar-toggler"
           type="button"
@@ -119,14 +148,14 @@
               <a href="about.html" class="nav-link">About</a>
             </li>
             <li class="nav-item">
-              <a href="services.html" class="nav-link">Services</a>
+              <a href="services.html" class="nav-link">Product Bundles</a>
             </li>
             <!-- <li class="nav-item active">
               <a href="cases.html" class="nav-link">Case S    tudy</a>
             </li> -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="blog.html" class="nav-link">Blog</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a href="contact.html" class="nav-link">Contact</a>
             </li>
@@ -135,65 +164,110 @@
       </div>
     </nav>
     <!-- END nav -->
-    <div class="hero-wrap">
-
-      <div class="home-slider owl-carousel">
-        <div class="slider-item" style="background-color: blue">
-          <div class="overlay"></div>
-          <div class="container">
-            <div
-              class="row no-gutters slider-text align-items-center justify-content-center"
-            >
-              <div class="col-md-8 ftco-animate">
-                <div class="text w-100 text-center">
-                  <h2>Accounting done AI-Mazingly</h2>
-                  <h1 class="mb-4">
-                    You run operations, while we keep the books
-                  </h1>
-                  <p>
-                    <a href="contact.html" class="btn btn-primary"
-                      >Let's Finkeep!</a
-                    >
-                  </p>
+    <div class="hero-wrap" style="background-color: #024294">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <!-- Text Column -->
+          <div class="col-md-6">
+            <div class="home-slider owl-carousel">
+              <div class="slider-item">
+                <div class="container">
+                  <div
+                    class="row no-gutters slider-text align-items-center justify-content-center"
+                  >
+                    <div class="col-md-12 ftco-animate">
+                      <div class="text w-100 text-center">
+                        <h2 style="color: white">
+                          Accounting done AI-Mazingly
+                        </h2>
+                        <h1 class="mb-4" style="color: white">
+                          You run operations, while we keep the books
+                        </h1>
+                        <p
+                          style="
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                          "
+                        >
+                          <a
+                            href="#"
+                            class="btn btn-primary btn-lg"
+                            onclick="openDialog()"
+                          >
+                            Let's Finkeep!
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <!-- Video Column -->
+          <div class="col-md-6 text-center">
+            <div
+              class="video-container"
+              style="
+                background-color: #024294;
+                border-radius: 10px;
+                overflow: hidden;
+              "
+            >
+              <video autoplay muted loop class="bg-video" width="100%">
+                <source src="/videos/hero_video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
-        <!-- <div class="slider-item" style="background-image: url(images/bg_2.jpg)">
-          <div class="overlay"></div>
-          <div class="container">
-            <div
-              class="row no-gutters slider-text align-items-center justify-content-center"
+    <!-- Bootstrap Modal for Dialog Box -->
+    <div class="modal" id="dialogBox" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Submit Form</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              onclick="closeDialog()"
             >
-              <div class="col-md-8 ftco-animate">
-                <div class="text w-100 text-center">
-                  <h2>We Support Business</h2>
-                  <h1 class="mb-4">The Best Business Support</h1>
-                  <p><a href="#" class="btn btn-white">Connect with us</a></p>
-                </div>
-              </div>
-            </div>
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-        </div> -->
-
-        <!-- <div class="slider-item" style="background-image: url(images/bg_3.jpg)">
-          <div class="overlay"></div>
-          <div class="container">
-            <div
-              class="row no-gutters slider-text align-items-center justify-content-center"
-            >
-              <div class="col-md-8 ftco-animate">
-                <div class="text w-100 text-center">
-                  <h2>We Give Advice</h2>
-                  <h1 class="mb-4">Expert Financial Advice</h1>
-                  <p><a href="#" class="btn btn-white">Connect with us</a></p>
-                </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  required
+                />
               </div>
-            </div>
+              <div class="form-group">
+                <label for="contact">Contact Info:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contact"
+                  name="contact"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
 
@@ -208,14 +282,17 @@
           </div>
           <div class="col-md-6 pl-md-5 py-md-5">
             <div class="heading-section pl-md-4 pt-md-5">
-              <span class="subheading">Welcome to Finkeep</span>
+              <span class="subheading" style="color: #024294"
+                >Welcome to Finkeep</span
+              >
               <h2 class="mb-4">We Are the Best Accounting Agency</h2>
             </div>
             <div class="services-2 w-100 d-flex">
               <div
                 class="icon d-flex align-items-center justify-content-center"
+                style="background-color: rgb(48, 34, 245)"
               >
-                <span class="flaticon-wealth"></span>
+                <span class="flaticon-accounting"></span>
               </div>
               <div class="text pl-4">
                 <h4>Accounting/Bookkeeping</h4>
@@ -228,6 +305,7 @@
             <div class="services-2 w-100 d-flex">
               <div
                 class="icon d-flex align-items-center justify-content-center"
+                style="background-color: rgb(48, 34, 245)"
               >
                 <span class="flaticon-accountant"></span>
               </div>
@@ -242,6 +320,7 @@
             <div class="services-2 w-100 d-flex">
               <div
                 class="icon d-flex align-items-center justify-content-center"
+                style="background-color: rgb(48, 34, 245)"
               >
                 <span class="flaticon-teamwork"></span>
               </div>
@@ -256,6 +335,7 @@
             <div class="services-2 w-100 d-flex">
               <div
                 class="icon d-flex align-items-center justify-content-center"
+                style="background-color: rgb(48, 34, 245)"
               >
                 <span class="flaticon-accounting"></span>
               </div>
@@ -271,42 +351,13 @@
             <div class="services-2 w-100 d-flex">
               <div
                 class="icon d-flex align-items-center justify-content-center"
+                style="background-color: rgb(48, 34, 245)"
               >
                 <span class="flaticon-accounting"></span>
               </div>
               <div class="text pl-4">
                 <h4>Financial Management & Advisory</h4>
                 <p>For optimized wealth growth and regulatory compliance.</p>
-              </div>
-            </div>
-            <div class="services-2 w-100 d-flex">
-              <div
-                class="icon d-flex align-items-center justify-content-center"
-              >
-                <span class="flaticon-accounting"></span>
-              </div>
-              <div class="text pl-4">
-                <h4>Accounts Payable/ Receivables Management</h4>
-              </div>
-            </div>
-            <div class="services-2 w-100 d-flex">
-              <div
-                class="icon d-flex align-items-center justify-content-center"
-              >
-                <span class="flaticon-accounting"></span>
-              </div>
-              <div class="text pl-4">
-                <h4>Compliance Reminders Related To Tax</h4>
-              </div>
-            </div>
-            <div class="services-2 w-100 d-flex">
-              <div
-                class="icon d-flex align-items-center justify-content-center"
-              >
-                <span class="flaticon-accounting"></span>
-              </div>
-              <div class="text pl-4">
-                <h4>Strategic Assistance During Audit</h4>
               </div>
             </div>
           </div>
@@ -320,64 +371,136 @@
           <div
             class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate"
           >
-            <div class="d-block">
+            <div
+              class="sub-block"
+              style="display: flex; flex-direction: column; flex-wrap: wrap"
+            >
               <div class="icon d-flex mr-2">
                 <span class="flaticon-accounting-1"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Accounting</h3>
+                <h3 class="heading">Chartered Accountants</h3>
                 <p>
-                  Even the all-powerful Pointing has no control about the blind
-                  texts it is an almost unorthographic.
+                  Outsourcing accounting tasks to us optimizes CA expertise
+                  utilization, facilitating more tax audits without compromising
+                  quality, averting delays, and maintaining excellence.
                 </p>
+              </div>
+              <div
+                class="read-more"
+                style="display: flex; justify-content: flex-end"
+              >
+                <a
+                  href="./clients/CAs.html"
+                  class="btn btn-primary btn-sm"
+                  style="background-color: blue"
+                  id="openNewPageBtn"
+                >
+                  Open
+                </a>
               </div>
             </div>
           </div>
           <div
             class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate"
           >
-            <div class="d-block">
+            <div
+              class="sub-block"
+              style="display: flex; flex-direction: column; flex-wrap: wrap"
+            >
               <div class="icon d-flex mr-2">
                 <span class="flaticon-tax"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Tax, Compliance &amp; Payroll</h3>
+                <h3 class="heading">Business Owner</h3>
                 <p>
-                  Even the all-powerful Pointing has no control about the blind
-                  texts it is an almost unorthographic.
+                  Our cost-effective accounting services require no year-round
+                  commitment, offering savings of up to 1/3, allowing you to
+                  focus on core business functions while we handle your
+                  accounting needs.
                 </p>
+              </div>
+
+              <div
+                class="read-more"
+                style="display: flex; justify-content: flex-end"
+              >
+                <a
+                  href="./clients/BOs.html"
+                  class="btn btn-primary btn-sm"
+                  style="background-color: blue"
+                  id="openNewPageBtn"
+                >
+                  Open
+                </a>
               </div>
             </div>
           </div>
           <div
             class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate"
           >
-            <div class="d-block">
+            <div
+              class="sub-block"
+              style="display: flex; flex-direction: column; flex-wrap: wrap"
+            >
               <div class="icon d-flex mr-2">
                 <span class="flaticon-loan"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Financial Services</h3>
+                <h3 class="heading">Accounting Personnel & Firms</h3>
                 <p>
-                  Even the all-powerful Pointing has no control about the blind
-                  texts it is an almost unorthographic.
+                  Our scalable services eliminate the need for excess capacity,
+                  enabling business growth without added overhead costs. Enhance
+                  client engagements and reputation with our client-pleasing
+                  reports.
                 </p>
+              </div>
+              <div
+                class="read-more"
+                style="display: flex; justify-content: flex-end"
+              >
+                <a
+                  href="./clients/AP&F.html"
+                  class="btn btn-primary btn-sm"
+                  style="background-color: blue"
+                  id="openNewPageBtn"
+                >
+                  Open
+                </a>
               </div>
             </div>
           </div>
           <div
             class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate"
           >
-            <div class="d-block">
+            <div
+              class="sub-block"
+              style="display: flex; flex-direction: column; flex-wrap: wrap"
+            >
               <div class="icon d-flex mr-2">
                 <span class="flaticon-budget"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Growth &amp; Funding Access</h3>
+                <h3 class="heading">Professional Affiliates</h3>
                 <p>
-                  Even the all-powerful Pointing has no control about the blind
-                  texts it is an almost unorthographic.
+                  Future aspirants can boost their practice effortlessly with
+                  extra stipends by using our discounted services to manage
+                  books of new clients and ensuring quality compliance from
+                  onset.
                 </p>
+              </div>
+              <div
+                class="read-more"
+                style="display: flex; justify-content: flex-end"
+              >
+                <a
+                  href="./clients/ProfessionalAffiliates.html"
+                  class="btn btn-primary btn-sm"
+                  style="background-color: blue"
+                  id="openNewPageBtn"
+                >
+                  Open
+                </a>
               </div>
             </div>
           </div>
@@ -393,7 +516,12 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="48">0</strong>
+                <strong
+                  class="number"
+                  data-number="48"
+                  style="color: rgb(0, 4, 255)"
+                  >0</strong
+                >
               </div>
               <div class="text">
                 <span>Schools & Colleges</span>
@@ -405,7 +533,12 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="7">0</strong>
+                <strong
+                  class="number"
+                  data-number="7"
+                  style="color: rgb(0, 4, 255)"
+                  >0</strong
+                >
               </div>
               <div class="text">
                 <span>Future & Options Traders</span>
@@ -417,7 +550,12 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="7">0</strong>
+                <strong
+                  class="number"
+                  data-number="7"
+                  style="color: rgb(0, 4, 255)"
+                  >0</strong
+                >
               </div>
               <div class="text">
                 <span>GTA & CHA</span>
@@ -429,7 +567,12 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="3">0</strong>
+                <strong
+                  class="number"
+                  data-number="3"
+                  style="color: rgb(0, 4, 255)"
+                  >0</strong
+                >
               </div>
               <div class="text">
                 <span>Pharmacy and research</span>
@@ -441,7 +584,12 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="4">0</strong>
+                <strong
+                  class="number"
+                  data-number="4"
+                  style="color: rgb(0, 4, 255)"
+                  >0</strong
+                >
               </div>
               <div class="text">
                 <span>IT Companies</span>
@@ -453,7 +601,12 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="6">0</strong>
+                <strong
+                  class="number"
+                  data-number="6"
+                  style="color: rgb(0, 4, 255)"
+                  >0</strong
+                >
               </div>
               <div class="text">
                 <span>Manufacturing & Trading</span>
@@ -465,7 +618,12 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="2">0</strong>
+                <strong
+                  class="number"
+                  data-number="2"
+                  style="color: rgb(0, 4, 255)"
+                  >0</strong
+                >
               </div>
               <div class="text">
                 <span>Hotels</span>
@@ -477,7 +635,12 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong class="number" data-number="5">0</strong>
+                <strong
+                  class="number"
+                  data-number="5"
+                  style="color: rgb(0, 4, 255)"
+                  >0</strong
+                >
               </div>
               <div class="text">
                 <span>Others</span>
@@ -489,14 +652,14 @@
     </section>
 
     <section class="ftco-section testimony-section">
-      <div class="overlay" style="background-color: cyan"></div>
+      <div class="overlay" style="background-color: #024294"></div>
       <div class="container">
         <div class="row justify-content-center pb-5 mb-3">
           <div
             class="col-md-7 heading-section heading-section-white text-center ftco-animate"
           >
-            <span class="subheading">Testimonies</span>
-            <h2>Happy Clients &amp; Feedbacks</h2>
+            <span class="subheading" style="color: white">Testimonies</span>
+            <h2 style="color: white">Happy Clients &amp; Feedbacks</h2>
           </div>
         </div>
         <div class="row ftco-animate">
@@ -506,6 +669,7 @@
                 <div class="testimony-wrap py-4">
                   <div
                     class="icon d-flex align-items-center justify-content-center"
+                    style="background-color: blue"
                   >
                     <span class="fa fa-quote-left"></span>
                   </div>
@@ -533,6 +697,7 @@
                 <div class="testimony-wrap py-4">
                   <div
                     class="icon d-flex align-items-center justify-content-center"
+                    style="background-color: blue"
                   >
                     <span class="fa fa-quote-left"></span>
                   </div>
@@ -562,6 +727,7 @@
                 <div class="testimony-wrap py-4">
                   <div
                     class="icon d-flex align-items-center justify-content-center"
+                    style="background-color: blue"
                   >
                     <span class="fa fa-quote-left"></span>
                   </div>
@@ -591,7 +757,10 @@
       </div>
     </section>
 
-    <section class="ftco-section ftco-no-pt bg-light ftco-faqs">
+    <section
+      class="ftco-section ftco-no-pt bg-light ftco-faqs"
+      style="margin: 20px"
+    >
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -608,414 +777,186 @@
           </div>
           <div class="col-lg-6 pl-lg-5">
             <div class="heading-section mb-5 mt-5 mt-lg-0">
-              <span class="subheading">FAQs</span>
-              <h2 class="mb-3">Frequently Asks Questions</h2>
-              <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
+              <span class="subheading" style="color: blue">FAQs</span>
+              <h2 class="mb-3" style="color: blue">
+                Frequently Asks Questions
+              </h2>
             </div>
             <div
               id="accordion"
               class="myaccordion w-100"
               aria-multiselectable="true"
             >
-              <div class="card">
-                <div class="card-header p-0" id="headingOne">
-                  <h2 class="mb-0">
-                    <button
-                      href="#collapseOne"
-                      class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
-                      data-parent="#accordion"
-                      data-toggle="collapse"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                    >
-                      <p class="mb-0">How to fixed a problem?</p>
-                      <i class="fa" aria-hidden="true"></i>
-                    </button>
-                  </h2>
+              <div class="faq-item">
+                <div class="card-header p-0">
+                  <div
+                    class="faq-question"
+                    style="color: white; border-radius: 30px; padding: 10px"
+                    onclick="toggleAnswer('faq1')"
+                  >
+                    <h2 style="color: whitesmoke; font-size: large">
+                      How does your AI system handle suspense entries?
+                    </h2>
+                  </div>
                 </div>
-                <div
-                  class="collapse show"
-                  id="collapseOne"
-                  role="tabpanel"
-                  aria-labelledby="headingOne"
-                >
+
+                <div id="faq1" class="faq-answer">
                   <div class="card-body py-3 px-0">
                     <ol>
-                      <li>Far far away, behind the word mountains</li>
-                      <li>Consonantia, there live the blind texts</li>
                       <li>
-                        When she reached the first hills of the Italic Mountains
+                        All the entries which a human can identify can be
+                        entered by the artificial intelligence.
                       </li>
-                      <li>Bookmarksgrove, the headline of Alphabet Village</li>
-                      <li>Separated they live in Bookmarksgrove right</li>
+                      <li>
+                        Our AI system flags entries without descriptions and
+                        emails them to the client with reference numbers two
+                        days before a scheduled video conference for
+                        clarification.
+                      </li>
                     </ol>
                   </div>
                 </div>
               </div>
 
-              <div class="card">
-                <div class="card-header p-0" id="headingTwo" role="tab">
-                  <h2 class="mb-0">
-                    <button
-                      href="#collapseTwo"
-                      class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
-                      data-parent="#accordion"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      <p class="mb-0">How to manage your business loans?</p>
-                      <i class="fa" aria-hidden="true"></i>
-                    </button>
+              <div class="faq-item">
+                <div
+                  class="faq-question"
+                  style="color: white; border-radius: 30px; padding: 10px"
+                  onclick="toggleAnswer('faq2')"
+                >
+                  <h2 style="color: whitesmoke; font-size: large">
+                    How do you streamline and minimize the back-and-forth
+                    communication between your accounting team and the client?
                   </h2>
                 </div>
-                <div
-                  class="collapse"
-                  id="collapseTwo"
-                  role="tabpanel"
-                  aria-labelledby="headingTwo"
-                >
-                  <div class="card-body py-3 px-0">
-                    <ol>
-                      <li>Far far away, behind the word mountains</li>
-                      <li>Consonantia, there live the blind texts</li>
-                      <li>
-                        When she reached the first hills of the Italic Mountains
-                      </li>
-                      <li>Bookmarksgrove, the headline of Alphabet Village</li>
-                      <li>Separated they live in Bookmarksgrove right</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-header p-0" id="headingThree" role="tab">
-                  <h2 class="mb-0">
-                    <button
-                      href="#collapseThree"
-                      class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
-                      data-parent="#accordion"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      aria-controls="collapseThree"
-                    >
-                      <p class="mb-0">How to grow your investments funds?</p>
-                      <i class="fa" aria-hidden="true"></i>
-                    </button>
-                  </h2>
-                </div>
-                <div
-                  class="collapse"
-                  id="collapseThree"
-                  role="tabpanel"
-                  aria-labelledby="headingTwo"
-                >
-                  <div class="card-body py-3 px-0">
-                    <ol>
-                      <li>Far far away, behind the word mountains</li>
-                      <li>Consonantia, there live the blind texts</li>
-                      <li>
-                        When she reached the first hills of the Italic Mountains
-                      </li>
-                      <li>Bookmarksgrove, the headline of Alphabet Village</li>
-                      <li>Separated they live in Bookmarksgrove right</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-header p-0" id="headingFour" role="tab">
-                  <h2 class="mb-0">
-                    <button
-                      href="#collapseFour"
-                      class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
-                      data-parent="#accordion"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      aria-controls="collapseFour"
-                    >
-                      <p class="mb-0">
-                        What are those requirements for businesses?
-                      </p>
-                      <i class="fa" aria-hidden="true"></i>
-                    </button>
-                  </h2>
-                </div>
-                <div
-                  class="collapse"
-                  id="collapseFour"
-                  role="tabpanel"
-                  aria-labelledby="headingTwo"
-                >
+                <div id="faq2" class="faq-answer">
                   <div class="card-body py-3 px-0">
                     <p>
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts. Separated they live in Bookmarksgrove right at the
-                      coast of the Semantics, a large language ocean.
+                      We have established a structured operational protocol
+                      within our organization to minimize unnecessary
+                      back-and-forth communication between our team and clients.
+                      Our approach includes:
                     </p>
+                    <ol>
+                      <li>
+                        Efficient Data Transfer: We use networking software such
+                        as OneDrive to facilitate seamless and secure data
+                        transmission, reducing the need for frequent exchanges.
+                      </li>
+                      <li>
+                        Chartered Accountant Interaction: To prevent clients
+                        from dealing with complex financial terminologies, our
+                        clients have direct access to chartered accountants
+                        within our network. This ensures effective communication
+                        and eliminates the need for extensive client education
+                        on financial terminology.
+                      </li>
+                    </ol>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center pb-5 mb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <span class="subheading">News &amp; Blog</span>
-            <h2>Latest news from our blog</h2>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a
-                href="blog-single.html"
-                class="block-20 rounded"
-                style="background-image: url('images/image_1.jpg')"
-              >
-              </a>
-              <div class="text p-4">
-                <div class="meta mb-2">
-                  <div><a href="#">March 31, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div>
-                    <a href="#" class="meta-chat"
-                      ><span class="fa fa-comment"></span> 3</a
-                    >
+              <div class="faq-item">
+                <div
+                  class="faq-question"
+                  style="color: white; border-radius: 30px; padding: 10px"
+                  onclick="toggleAnswer('faq3')"
+                >
+                  <h2 style="color: whitesmoke; font-size: large">
+                    How do you guarantee the security of sensitive information?
+                  </h2>
+                </div>
+                <div id="faq3" class="faq-answer">
+                  <div class="card-body py-3 px-0">
+                    <ol>
+                      <li>
+                        Vendor Agreements: We establish binding agreements with
+                        our clients to uphold strict confidentiality standards,
+                        safeguarding the confidentiality of client data.
+                      </li>
+                      <li>
+                        Secure Data Storage: Client data is exclusively stored
+                        on their OneDrive accounts or on our local network.
+                        Access to these drives are granted to us, ensuring that
+                        data remains securely within the client's controlled
+                        environment. This setup minimizes the risk of
+                        unauthorized access.
+                      </li>
+                    </ol>
                   </div>
                 </div>
-                <h3 class="heading">
-                  <a href="#"
-                    >Even the all-powerful Pointing has no control about the
-                    blind texts</a
-                  >
-                </h3>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a
-                href="blog-single.html"
-                class="block-20 rounded"
-                style="background-image: url('images/image_2.jpg')"
-              >
-              </a>
-              <div class="text p-4">
-                <div class="meta mb-2">
-                  <div><a href="#">March 31, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div>
-                    <a href="#" class="meta-chat"
-                      ><span class="fa fa-comment"></span> 3</a
-                    >
+
+              <div class="faq-item">
+                <div
+                  class="faq-question"
+                  style="color: white; border-radius: 30px; padding: 10px"
+                  onclick="toggleAnswer('faq4')"
+                >
+                  <h2 style="color: whitesmoke; font-size: large">
+                    How do you verify the precision of the data?
+                  </h2>
+                </div>
+                <div id="faq4" class="faq-answer">
+                  <div class="card-body py-3 px-0">
+                    <p>
+                      We uphold rigorous quality standards to ensure the
+                      precision of our data:
+                    </p>
+                    <ol>
+                      <li>
+                        Comprehensive Training: Our accountants undergo thorough
+                        training, including periodic assessments, to maintain
+                        their proficiency.
+                      </li>
+                      <li>
+                        Regular CA Verification: A Chartered Accountant (CA)
+                        periodically reviews the work of our accountants to
+                        maintain accuracy and compliance.
+                      </li>
+                      <li>
+                        Technology Assistance: Leveraging advanced technology,
+                        we significantly reduce accounting errors, contributing
+                        to data accuracy.
+                      </li>
+                      <li>
+                        Autonomous Bots: We are in the process of implementing
+                        autonomous bots for data validation, further enhancing
+                        the accuracy of our reports.
+                      </li>
+                    </ol>
                   </div>
                 </div>
-                <h3 class="heading">
-                  <a href="#"
-                    >Even the all-powerful Pointing has no control about the
-                    blind texts</a
-                  >
-                </h3>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a
-                href="blog-single.html"
-                class="block-20 rounded"
-                style="background-image: url('images/image_3.jpg')"
-              >
-              </a>
-              <div class="text p-4">
-                <div class="meta mb-2">
-                  <div><a href="#">March 31, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div>
-                    <a href="#" class="meta-chat"
-                      ><span class="fa fa-comment"></span> 3</a
-                    >
+
+              <div class="faq-item">
+                <div
+                  class="faq-question"
+                  style="color: white; border-radius: 30px; padding: 10px"
+                  onclick="toggleAnswer('faq5')"
+                >
+                  <h2 style="color: whitesmoke; font-size: large">
+                    How do you ensure the quality of your workforce?
+                  </h2>
+                </div>
+                <div id="faq5" class="faq-answer">
+                  <div class="card-body py-3 px-0">
+                    <ol>
+                      <li>
+                        Continuous Training: Our accountants receive ongoing
+                        training, including post-induction evaluations, to
+                        enhance their accuracy and competency.
+                      </li>
+                      <li>
+                        Quality Assurance: Every data output undergoes scrutiny
+                        by either a senior accountant or a chartered accountant
+                        before finalization. This ensures alignment with our
+                        internal accounting standards and maintains quality
+                        assurance.
+                      </li>
+                    </ol>
                   </div>
                 </div>
-                <h3 class="heading">
-                  <a href="#"
-                    >Even the all-powerful Pointing has no control about the
-                    blind texts</a
-                  >
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section ftco-no-pb ftco-no-pt bg-secondary">
-      <div class="container py-5">
-        <div class="row">
-          <div class="col-md-7 d-flex align-items-center">
-            <h2 class="mb-3 mb-sm-0" style="color: black; font-size: 22px">
-              Sign Up for Your Free 1st Accounting Consultation
-            </h2>
-          </div>
-          <div class="col-md-5 d-flex align-items-center">
-            <form action="#" class="subscribe-form">
-              <div class="form-group d-flex">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter email address"
-                />
-                <input type="submit" value="Subscribe" class="submit px-3" />
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center pb-5 mb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <span class="subheading">Price &amp; Plans</span>
-            <h2>Affordable Packages</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="block-7">
-              <div class="text-center">
-                <span class="excerpt d-block">Personal</span>
-                <span class="price"
-                  ><sup>$</sup> <span class="number">49</span>
-                  <sub>/mos</sub></span
-                >
-
-                <ul class="pricing-text mb-5">
-                  <li><span class="fa fa-check mr-2"></span>Brand Strategy</li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Online Marketing
-                  </li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Branding Services
-                  </li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Creative Marketing
-                  </li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Sales Management
-                  </li>
-                </ul>
-
-                <a href="#" class="btn btn-primary d-block px-2 py-3"
-                  >Get Started</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="block-7">
-              <div class="text-center">
-                <span class="excerpt d-block">Business</span>
-                <span class="price"
-                  ><sup>$</sup> <span class="number">79</span>
-                  <sub>/mos</sub></span
-                >
-
-                <ul class="pricing-text mb-5">
-                  <li><span class="fa fa-check mr-2"></span>Brand Strategy</li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Online Marketing
-                  </li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Branding Services
-                  </li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Creative Marketing
-                  </li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Sales Management
-                  </li>
-                </ul>
-
-                <a href="#" class="btn btn-primary d-block px-2 py-3"
-                  >Get Started</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="block-7">
-              <div class="text-center">
-                <span class="excerpt d-block">Ultimate</span>
-                <span class="price"
-                  ><sup>$</sup> <span class="number">109</span>
-                  <sub>/mos</sub></span
-                >
-
-                <ul class="pricing-text mb-5">
-                  <li><span class="fa fa-check mr-2"></span>Brand Strategy</li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Online Marketing
-                  </li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Branding Services
-                  </li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Creative Marketing
-                  </li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Sales Management
-                  </li>
-                </ul>
-
-                <a href="#" class="btn btn-primary d-block px-2 py-3"
-                  >Get Started</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="block-7">
-              <div class="text-center">
-                <span class="excerpt d-block">Premium</span>
-                <span class="price"
-                  ><sup>$</sup> <span class="number">149</span>
-                  <sub>/mos</sub></span
-                >
-
-                <ul class="pricing-text mb-5">
-                  <li><span class="fa fa-check mr-2"></span>Brand Strategy</li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Online Marketing
-                  </li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Branding Services
-                  </li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Creative Marketing
-                  </li>
-                  <li>
-                    <span class="fa fa-check mr-2"></span>Sales Management
-                  </li>
-                </ul>
-
-                <a href="#" class="btn btn-primary d-block px-2 py-3"
-                  >Get Started</a
-                >
               </div>
             </div>
           </div>
@@ -1098,47 +1039,23 @@
                               >Accounts Payable/ Receivables Management</a
                             >
                           </li>
-                          <li>
-                            <a href="#" class="py-1 d-block"
-                              >Financial Statement Analysis and Advisory</a
-                            >
-                          </li>
-                          <li>
-                            <a href="#" class="py-1 d-block"
-                              >Compliance Reminders Related To Tax</a
-                            >
-                          </li>
-                          <li>
-                            <a href="#" class="py-1 d-block"
-                              >Strategic Assistance During Audit</a
-                            >
-                          </li>
                         </ul>
                       </div>
                       <div class="col-md-3 mb-md-0 mb-4">
                         <h2 class="footer-heading">Discover</h2>
                         <ul class="list-unstyled">
-                          <li><a href="#" class="py-1 d-block">About us</a></li>
+                          <li><a href="about.html" class="py-1 d-block">About us</a></li>
                           <li>
-                            <a href="#" class="py-1 d-block">Contract us</a>
+                            <a href="contact.html" class="py-1 d-block">Contact us</a>
                           </li>
-                          <li>
+                          <!-- <li>
                             <a href="#" class="py-1 d-block"
                               >Terms &amp; Conditions</a
                             >
-                          </li>
-                          <li><a href="#" class="py-1 d-block">Policies</a></li>
+                          </li> -->
+                          <!-- <li><a href="#" class="py-1 d-block">Policies</a></li> -->
                         </ul>
                       </div>
-                      <!-- <div class="col-md-4 p-4 mb-md-0 mb-4">
-                        <h2 class="footer-heading">Resources</h2>
-                        <ul class="list-unstyled">
-                          <li><a href="#" class="py-1 d-block">Security</a></li>
-                          <li><a href="#" class="py-1 d-block">Global</a></li>
-                          <li><a href="#" class="py-1 d-block">Charts</a></li>
-                          <li><a href="#" class="py-1 d-block">Privacy</a></li>
-                        </ul>
-                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -1176,7 +1093,7 @@
                 ></textarea>
               </div>
               <div class="form-group">
-                <button type="submit" class="form-control submit px-3">
+                <button type="submit" class="form-control px-3 submit">
                   Send A Message
                 </button>
               </div>
@@ -1210,7 +1127,26 @@
         />
       </svg>
     </div>
+    <script>
+      function toggleAnswer(faqId) {
+        var answerDiv = document.getElementById(faqId);
+        var allAnswers = document.getElementsByClassName("faq-answer");
 
+        // Close all other FAQ items
+        for (var i = 0; i < allAnswers.length; i++) {
+          if (allAnswers[i].id !== faqId) {
+            allAnswers[i].classList.remove("show");
+          }
+        }
+
+        // Toggle the clicked FAQ item
+        if (answerDiv.classList.contains("show")) {
+          answerDiv.classList.remove("show");
+        } else {
+          answerDiv.classList.add("show");
+        }
+      }
+    </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -1225,5 +1161,46 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function openDialog() {
+        $("#dialogBox").modal("show");
+      }
+
+      function closeDialog() {
+        $("#dialogBox").modal("hide");
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            // Adjust the scroll value as needed
+            $("#ftco-navbar").addClass("navbar-scrolled");
+          } else {
+            $("#ftco-navbar").removeClass("navbar-scrolled");
+          }
+        });
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </body>
 </html>
