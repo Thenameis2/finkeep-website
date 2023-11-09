@@ -94,7 +94,7 @@
         color: white;
       }
 
-      .faq-question h2:hover{
+      .faq-question h2:hover {
         color: #0b4fa8;
       }
 
@@ -140,15 +140,12 @@
         color: white;
         cursor: pointer;
       }
-      .navbar-scrolled {
-        background: white; /* Change to the desired color */
-        transition: background-color 0.3s ease; /* Smooth transition effect */
-      }
     </style>
+    
   </head>
   <body>
     <nav
-      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light sticky-top"
+      class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light sticky-top"
       id="ftco-navbar"
     >
       <div class="container">
@@ -167,22 +164,16 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav m-auto">
             <li class="nav-item">
-              <a href="index.html" class="nav-link">Home</a>
+              <a href="index.html" class="nav-link" style="color: black;">Home</a>
             </li>
             <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
+              <a href="about.html" class="nav-link" style="color: black;">About</a>
             </li>
             <li class="nav-item">
-              <a href="services.html" class="nav-link">Product Bundles</a>
+              <a href="services.html" class="nav-link" style="color: black;">Product Bundles</a>
             </li>
-            <!-- <li class="nav-item active">
-              <a href="cases.html" class="nav-link">Case S    tudy</a>
-            </li> -->
-            <!-- <li class="nav-item">
-              <a href="blog.html" class="nav-link">Blog</a>
-            </li> -->
             <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
+              <a href="contact.html" class="nav-link" style="color: black;">Contact</a>
             </li>
           </ul>
         </div>
@@ -200,13 +191,7 @@
       <form id="myForm">
         <div class="mb-3">
           <label for="name" class="form-label">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="form-control"
-            required
-          />
+          <input class="form-control" required />
         </div>
 
         <div class="mb-3">
@@ -1227,19 +1212,6 @@
     ></script>
 
     <script>
-      $(document).ready(function () {
-        $(window).scroll(function () {
-          if ($(this).scrollTop() > 50) {
-            // Adjust the scroll value as needed
-            $("#ftco-navbar").addClass("navbar-scrolled");
-          } else {
-            $("#ftco-navbar").removeClass("navbar-scrolled");
-          }
-        });
-      });
-    </script>
-
-    <script>
       // Function to open the dialog box
       function openDialog() {
         document.getElementById("dialogBox").style.display = "block";
@@ -1266,5 +1238,26 @@
     </script>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          // Check if the scroll position is greater than 50px
+          if ($(this).scrollTop() > 50) {
+            $("#ftco-navbar").css({
+              "background-color": "#062d60", // Change background color on scroll
+              "color": "white" // Change text color to white
+            });
+            $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "white"); // Change text color of nav links and navbar brand to white
+          } else {
+            $("#ftco-navbar").css({
+              "background-color": "white", // Reset background color
+              "color": "black" // Reset text color to black (or your default color)
+            });
+            $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "black"); // Reset text color of nav links and navbar brand to black (or your default color)
+          }
+        });
+      });
+    </script>
   </body>
 </html>
