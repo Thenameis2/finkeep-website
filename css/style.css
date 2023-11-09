@@ -2070,7 +2070,7 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
+  background-color: #062d60;
   border-color: #007bff; }
   .btn-primary:hover {
     color: #fff;
@@ -3473,7 +3473,7 @@ input[type="button"].btn-block {
   line-height: inherit;
   white-space: nowrap; }
   .navbar-brand:hover, .navbar-brand:focus {
-  background: #024294;
+  border-color: green;
 }
 
 .navbar-nav {
@@ -3612,7 +3612,9 @@ input[type="button"].btn-block {
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0; }
+  
+  }
 
 @media (min-width: 992px) {
   .navbar-expand-lg {
@@ -8113,8 +8115,8 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light .navbar-brand span {
       color: #cccccc; }
     .ftco-navbar-light .navbar-brand:hover, .ftco-navbar-light .navbar-brand:focus {
-      color: white;
-      background: #024294;
+    color: #007bff;
+
     border-radius: 15px; }
     @media (max-width: 767.98px) {
       .ftco-navbar-light .navbar-brand {
@@ -8140,7 +8142,7 @@ h1, h2, h3, h4, h5,
       height: 2px;
       bottom: 0px;
       left: 0;
-      background-color: #1ba12d;
+      background-color: #0A5AC2;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
@@ -8150,12 +8152,11 @@ h1, h2, h3, h4, h5,
       transition: all 0.5s ease-in-out 0s;
       z-index: -1; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-      color: white;
-      background: #024294;
-      border-radius: 20px; }
+      color: #007bff;
+ }
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover:before {
         visibility: visible;
-        background-color: #1ba12d;
+        background-color: #0A5AC2;
         -webkit-transform: scaleX(1);
         -ms-transform: scaleX(1);
         transform: scaleX(1); }
@@ -8605,7 +8606,7 @@ h1, h2, h3, h4, h5,
       .btn.btn-primary.btn-outline-primary:hover {
         border: 1px solid transparent;
         background: #1ba12d;
-        color: #fff; }
+        color: white; }
   .btn.btn-white {
     background: #fff;
     border: 1px solid #fff;
@@ -9054,14 +9055,14 @@ textarea.form-control {
 .testimony-section {
   position: relative;
   z-index: 0; }
-  .testimony-section .overlay {
+  .testimony-section .overlay1 {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     content: '';
     height: 400px;
-    background: #8fd0d2; }
+    background: #062d60; }
   .testimony-section .owl-carousel {
     margin: 0; }
   .testimony-section .owl-carousel .owl-stage-outer {

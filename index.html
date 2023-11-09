@@ -73,24 +73,31 @@
       }
 
       .faq-question {
-        background-color: #1f86f5;
-        color: white;
-        border-radius: 30px;
-        padding: 10px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+        border-radius: 20px;
+        transition: background-color 0.3s, color 0.3s, border 0.3s; /* Add a smooth transition effect */
+
+        /* Set the initial styles */
+        background-color: #0b4fa8;
+        border: 2px solid transparent; /* Set a transparent border initially */
       }
 
       .faq-question:hover {
-        background-color: rgb(47, 74, 230);
+        background-color: #f4f4f4; /* Lighter background on hover */
+        color: #0b4fa8;
+        border: 1px solid #0b4fa8;
       }
 
-      /* Adjusted the font size for better readability */
       .faq-question h2 {
-        color: whitesmoke;
-        font-size: 16px;
+        color: #333; /* Adjusted the text color for better contrast */
+        font-size: 18px; /* Increased font size for better readability */
         margin: 0;
+        color: white;
       }
+
+      .faq-question h2:hover{
+        color: #0b4fa8;
+      }
+
       .faq-answer {
         max-height: 0;
         overflow: hidden;
@@ -244,7 +251,7 @@
       </form>
     </div>
 
-    <div class="hero-wrap" style="background-color: #024294">
+    <div class="hero-wrap" style="background-color: #062d60">
       <div class="container-fluid">
         <div class="row align-items-center">
           <!-- Text Column -->
@@ -431,7 +438,7 @@
               style="display: flex; flex-direction: column; flex-wrap: wrap"
             >
               <div class="icon d-flex mr-2">
-                <span class="flaticon-accounting-1"></span>
+                <span class="flaticon-tax"></span>
               </div>
               <div class="media-body">
                 <h3 class="heading">Chartered Accountants</h3>
@@ -463,7 +470,7 @@
               style="display: flex; flex-direction: column; flex-wrap: wrap"
             >
               <div class="icon d-flex mr-2">
-                <span class="flaticon-tax"></span>
+                <span class="flaticon-loan"></span>
               </div>
               <div class="media-body">
                 <h3 class="heading">Business Owner</h3>
@@ -497,7 +504,7 @@
               style="display: flex; flex-direction: column; flex-wrap: wrap"
             >
               <div class="icon d-flex mr-2">
-                <span class="flaticon-loan"></span>
+                <span class="flaticon-tax"></span>
               </div>
               <div class="media-body">
                 <h3 class="heading">Accounting Personnel & Firms</h3>
@@ -530,7 +537,7 @@
               style="display: flex; flex-direction: column; flex-wrap: wrap"
             >
               <div class="icon d-flex mr-2">
-                <span class="flaticon-budget"></span>
+                <span class="flaticon-loan"></span>
               </div>
               <div class="media-body">
                 <h3 class="heading">Professional Affiliates</h3>
@@ -703,7 +710,7 @@
     </section>
 
     <section class="ftco-section testimony-section">
-      <div class="overlay" style="background-color: #024294"></div>
+      <div class="overlay1"></div>
       <div class="container">
         <div class="row justify-content-center pb-5 mb-3">
           <div
@@ -847,9 +854,7 @@
                     style="color: white; border-radius: 30px; padding: 10px"
                     onclick="toggleAnswer('faq1')"
                   >
-                    <h2 style="color: whitesmoke; font-size: large">
-                      How does your AI system handle suspense entries?
-                    </h2>
+                    <h2>How does your AI system handle suspense entries?</h2>
                   </div>
                 </div>
 
@@ -877,7 +882,7 @@
                   style="color: white; border-radius: 30px; padding: 10px"
                   onclick="toggleAnswer('faq2')"
                 >
-                  <h2 style="color: whitesmoke; font-size: large">
+                  <h2>
                     How do you streamline and minimize the back-and-forth
                     communication between your accounting team and the client?
                   </h2>
@@ -915,7 +920,7 @@
                   style="color: white; border-radius: 30px; padding: 10px"
                   onclick="toggleAnswer('faq3')"
                 >
-                  <h2 style="color: whitesmoke; font-size: large">
+                  <h2>
                     How do you guarantee the security of sensitive information?
                   </h2>
                 </div>
@@ -946,9 +951,7 @@
                   style="color: white; border-radius: 30px; padding: 10px"
                   onclick="toggleAnswer('faq4')"
                 >
-                  <h2 style="color: whitesmoke; font-size: large">
-                    How do you verify the precision of the data?
-                  </h2>
+                  <h2>How do you verify the precision of the data?</h2>
                 </div>
                 <div id="faq4" class="faq-answer">
                   <div class="card-body py-3 px-0">
@@ -988,9 +991,7 @@
                   style="color: white; border-radius: 30px; padding: 10px"
                   onclick="toggleAnswer('faq5')"
                 >
-                  <h2 style="color: whitesmoke; font-size: large">
-                    How do you ensure the quality of your workforce?
-                  </h2>
+                  <h2>How do you ensure the quality of your workforce?</h2>
                 </div>
                 <div id="faq5" class="faq-answer">
                   <div class="card-body py-3 px-0">
