@@ -8644,7 +8644,7 @@ h1, h2, h3, h4, h5,
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: rgb(21, 96, 209);
+    background: #062D60;
     border: 1px solid white;
     color: #fff; }
     .btn.btn-primary:hover {
@@ -9013,7 +9013,7 @@ textarea.form-control {
     border-radius: 50%;
     position: relative; }
     .ftco-footer-social li a span {
-      color: blue;
+      color: #062D60;
       position: absolute;
       font-size: 20px;
       top: 50%;
