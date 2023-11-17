@@ -60,41 +60,48 @@
   </head>
   <body>
     <nav
-      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light sticky-top"
-      id="ftco-navbar"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Finkeep</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#ftco-nav"
-          aria-controls="ftco-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="fa fa-bars"></span> Menu
-        </button>
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item">
-              <a href="../index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="../about.html" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="../services.html" class="nav-link">Product Bundles</a>
-            </li>
-            <li class="nav-item">
-              <a href="../contact.html" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </div>
+    class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light sticky-top"
+    id="ftco-navbar"
+  >
+    <div class="container">
+      <div class="navbar-brand" >
+        <img
+        src="../images/Finkeep.png"
+          alt=""
+          class="image"
+          cover
+        />
       </div>
-    </nav>
-    <!-- END nav -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#ftco-nav"
+        aria-controls="ftco-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="fa fa-bars"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav" >
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../about.html" class="nav-link" >About</a>
+          </li>
+          <li class="nav-item">
+            <a href="../services.html" class="nav-link">Product Bundles</a>
+          </li>
+          <li class="nav-item">
+            <a href="../contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
     <!-- Big Title -->
     <div class="container mt-5 text-center">
       <h1 class="display-4">Helping Business Owners</h1>
@@ -397,5 +404,38 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          // Check if the scroll position is greater than 50px
+          if ($(this).scrollTop() > 50) {
+            $("#ftco-navbar").css({
+              "background-color": "#062d60", // Change background color on scroll
+            });
+            $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "white"); // Change text color of nav links and navbar brand to white
+          } else {
+            $("#ftco-navbar").css({
+              "background-color": "white", // Reset background color
+            });
+            $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "black"); // Reset text color of nav links and navbar brand to black (or your default color)
+          }
+        });
+
+        // Add hover effect to text with light blue color
+        $("#ftco-nav a, #ftco-navbar .navbar-brand").hover(
+          function () {
+            $(this).css("color", "#0A5AC2"); // Change text color on hover to light blue
+          },
+          function () {
+            // Change text color back to white when not hovering
+            if ($(window).scrollTop() > 50) {
+              $(this).css("color", "white");
+            } else {
+              $(this).css("color", "black");
+            }
+          }
+        );
+      });
+    </script>
   </body>
 </html>

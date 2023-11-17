@@ -77,7 +77,7 @@
         transition: background-color 0.3s, color 0.3s, border 0.3s; /* Add a smooth transition effect */
 
         /* Set the initial styles */
-        background-color: #0b4fa8;
+        background-color: #062d60;
         border: 2px solid transparent; /* Set a transparent border initially */
       }
 
@@ -141,7 +141,6 @@
         cursor: pointer;
       }
     </style>
-    
   </head>
   <body>
     <nav
@@ -149,7 +148,16 @@
       id="ftco-navbar"
     >
       <div class="container">
-        <a class="navbar-brand" href="index.html">Finkeep</a>
+        <!-- <a class="navbar-brand" href="index.html">Finkeep</a> -->
+        <div class="navbar-brand" >
+          <img
+            src="images/Finkeep.png"
+            alt=""
+            class="image"
+            cover
+          />
+        </div>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -164,16 +172,16 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav m-auto">
             <li class="nav-item">
-              <a href="index.html" class="nav-link" style="color: black;">Home</a>
+              <a href="index.html" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="about.html" class="nav-link" style="color: black;">About</a>
+              <a href="about.html" class="nav-link">About</a>
             </li>
             <li class="nav-item">
-              <a href="services.html" class="nav-link" style="color: black;">Product Bundles</a>
+              <a href="services.html" class="nav-link">Product Bundles</a>
             </li>
             <li class="nav-item">
-              <a href="contact.html" class="nav-link" style="color: black;">Contact</a>
+              <a href="contact.html" class="nav-link">Contact</a>
             </li>
           </ul>
         </div>
@@ -1246,17 +1254,30 @@
           if ($(this).scrollTop() > 50) {
             $("#ftco-navbar").css({
               "background-color": "#062d60", // Change background color on scroll
-              "color": "white" // Change text color to white
             });
             $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "white"); // Change text color of nav links and navbar brand to white
           } else {
             $("#ftco-navbar").css({
               "background-color": "white", // Reset background color
-              "color": "black" // Reset text color to black (or your default color)
             });
             $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "black"); // Reset text color of nav links and navbar brand to black (or your default color)
           }
         });
+
+        // Add hover effect to text with light blue color
+        $("#ftco-nav a, #ftco-navbar .navbar-brand").hover(
+          function () {
+            $(this).css("color", "#0A5AC2"); // Change text color on hover to light blue
+          },
+          function () {
+            // Change text color back to white when not hovering
+            if ($(window).scrollTop() > 50) {
+              $(this).css("color", "white");
+            } else {
+              $(this).css("color", "black");
+            }
+          }
+        );
       });
     </script>
   </body>
