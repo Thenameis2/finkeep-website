@@ -1252,18 +1252,30 @@
         $(window).scroll(function () {
           // Check if the scroll position is greater than 50px
           if ($(this).scrollTop() > 50) {
+            // Change background color on scroll
             $("#ftco-navbar").css({
-              "background-color": "#062d60", // Change background color on scroll
+              "background-color": "#062d60",
             });
-            $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "white"); // Change text color of nav links and navbar brand to white
+    
+            // Change text color of nav links and navbar brand to white
+            $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "white");
+    
+            // Change the logo image on scroll
+            $(".navbar-brand img").attr("src", "images/Finkeep.png");
           } else {
+            // Reset background color
             $("#ftco-navbar").css({
-              "background-color": "white", // Reset background color
+              "background-color": "white",
             });
-            $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "black"); // Reset text color of nav links and navbar brand to black (or your default color)
+    
+            // Reset text color of nav links and navbar brand to black (or your default color)
+            $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "black");
+    
+            // Reset the logo image when scrolling back to the top
+            $(".navbar-brand img").attr("src", "images/finkeep_blue.png");
           }
         });
-
+    
         // Add hover effect to text with light blue color
         $("#ftco-nav a, #ftco-navbar .navbar-brand").hover(
           function () {
@@ -1280,5 +1292,6 @@
         );
       });
     </script>
+    
   </body>
 </html>
