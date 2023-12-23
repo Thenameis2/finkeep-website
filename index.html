@@ -17,12 +17,17 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="css/animate.css" />
 
@@ -33,114 +38,7 @@
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/style.css" />
 
-    <style>
-      /* Style for the dialog box */
-      .dialog-box {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 20px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-      }
-
-      /* Style for the overlay */
-      .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 999;
-      }
-    </style>
-    <style>
-      body {
-        font-family: "Arial", sans-serif;
-        background-color: #f2f2f2;
-        margin: 0;
-        padding: 0;
-      }
-
-      .faq-item {
-        margin-bottom: 20px;
-      }
-
-      .faq-question {
-        border-radius: 20px;
-        transition: background-color 0.3s, color 0.3s, border 0.3s; /* Add a smooth transition effect */
-
-        /* Set the initial styles */
-        background-color: #062d60;
-        border: 2px solid transparent; /* Set a transparent border initially */
-      }
-
-      .faq-question:hover {
-        background-color: #f4f4f4; /* Lighter background on hover */
-        color: #0b4fa8;
-        border: 1px solid #0b4fa8;
-      }
-
-      .faq-question h2 {
-        color: #333; /* Adjusted the text color for better contrast */
-        font-size: 18px; /* Increased font size for better readability */
-        margin: 0;
-        color: white;
-      }
-
-      .faq-question h2:hover {
-        color: #0b4fa8;
-      }
-
-      .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-      }
-
-      .faq-answer.show {
-        max-height: 1000px; /* Adjust the value based on your content height */
-        transition: max-height 0.3s ease-in;
-      }
-      /* Add your animation styles here */
-      to {
-        opacity: 1;
-      }
-
-      .form-consultation {
-        max-width: 400px;
-        margin: auto;
-      }
-
-      .form-group {
-        margin-bottom: 15px;
-      }
-
-      .form-control {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
-
-      .form-control:focus {
-        outline: none;
-        border-color: #024294; /* Highlight border color on focus */
-      }
-
-      /* Updated the background color for the submit button */
-      .form-control[type="submit"] {
-        background-color: #024294;
-        color: white;
-        cursor: pointer;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <nav
@@ -148,14 +46,8 @@
       id="ftco-navbar"
     >
       <div class="container">
-        <!-- <a class="navbar-brand" href="index.html">Finkeep</a> -->
-        <div class="navbar-brand" >
-          <img
-            src="images/Finkeep.png"
-            alt=""
-            class="image"
-            cover
-          />
+        <div class="logo-container">
+          <img id="logoImage" alt="Logo" />
         </div>
 
         <button
@@ -171,17 +63,37 @@
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav m-auto">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">Home</a>
+            <li
+              class="nav-item1"
+              style="
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+              "
+            >
+              <a
+                href="index.html"
+                style="text-decoration: none"
+                class="nav-link1"
+              >
+                <img
+                  src="images/home-button.png"
+                  alt="Home Button"
+                  style="height: 100%; width: 80%"
+                />
+              </a>
             </li>
+
             <li class="nav-item">
               <a href="about.html" class="nav-link">About</a>
             </li>
             <li class="nav-item">
-              <a href="services.html" class="nav-link">Product Bundles</a>
+              <a href="services.html" class="nav-link">Offerings</a>
             </li>
             <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
+              <a href="contact.html" class="nav-link">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -244,7 +156,7 @@
       </form>
     </div>
 
-    <div class="hero-wrap" style="background-color: #062d60">
+    <div class="hero-wrap" style="background-color: #062d50">
       <div class="container-fluid">
         <div class="row align-items-center">
           <!-- Text Column -->
@@ -270,12 +182,25 @@
                             justify-content: center;
                           "
                         >
-                          <button
+                          <a
                             id="openDialogBtn"
-                            class="btn btn-primary btn-lg"
+                            style="
+                              background-color: #0a5ac2;
+                              color: white;
+                              font-weight: bold;
+                              padding: 15px 30px;
+                              border: 0.5mm solid white;
+                              border-radius: 2px;
+                              font-size: 18px;
+                              cursor: pointer;
+                              transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+                            "
+                            onmouseover="this.style.backgroundColor='#074481';"
+                            onmouseout="this.style.backgroundColor='#0a5ac2';"
+                            href="services.html"
                           >
                             Let's Finkeep!
-                          </button>
+                          </a>
                         </p>
                       </div>
                     </div>
@@ -308,12 +233,21 @@
     <section class="ftco-section ftco-no-pt bg-light">
       <div class="container">
         <div class="row d-flex no-gutters">
-          <div class="col-md-6 d-flex">
+          <div
+            class="col-md-6 d-flex justify-content-center align-items-center"
+          >
             <div
-              class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0"
-              style="background-image: url(images/about.jpg)"
+              class="d-flex"
+              style="
+                background-image: url(images/tally.png);
+                background-size: cover;
+                width: 100%;
+                height: 50%;
+                background-position: center center;
+              "
             ></div>
           </div>
+
           <div class="col-md-6 pl-md-5 py-md-5">
             <div class="heading-section pl-md-4 pt-md-5">
               <span class="subheading" style="color: #024294"
@@ -411,8 +345,10 @@
                 />
               </div>
               <div class="text pl-4">
-                <h4>Financial Management & Advisory</h4>
-                <p style="font-family: Circularstd Book">For optimized wealth growth and regulatory compliance.</p>
+                <h4>Financial Management, Advisory & Internal Control</h4>
+                <p style="font-family: Circularstd Book">
+                  For optimized wealth growth and regulatory compliance.
+                </p>
               </div>
             </div>
           </div>
@@ -425,22 +361,67 @@
         <div class="row">
           <div
             class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate"
+            style="overflow: visible"
           >
             <div
-              class="sub-block"
-              style="display: flex; flex-direction: column; flex-wrap: wrap"
+              class="sub-block position-relative"
+              style="
+                overflow: visible;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                position: relative;
+              "
             >
-              <div class="icon d-flex mr-2">
-                <span class="flaticon-tax"></span>
+              <!-- Element positioned outside the top-left corner with image overflow -->
+              <div
+                class="outside-element"
+                style="
+                  position: absolute;
+                  top: -30px;
+                  left: -55px;
+                  overflow: visible;
+                  z-index: 0;
+                  height: 22%;
+                "
+              >
+                <img
+                  src="images/001-office-worker.png"
+                  alt=""
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    z-index: -1;
+                    filter: blur(0.8px);
+                  "
+                />
               </div>
-              <div class="media-body">
-                <h3 class="heading">Chartered Accountants</h3>
-                <p style="font-family: Circularstd Book">
+
+              <div class="media-body" style="position: relative; z-index: 1">
+                <h3
+                  class="heading"
+                  style="
+                    background-color: rgba(255, 255, 255, 0.7);
+                    padding: 10px;
+                  "
+                >
+                  Chartered Accountants
+                </h3>
+                <p
+                  style="
+                    font-family: Circularstd Book;
+                    background-color: rgba(255, 255, 255, 0.7);
+                    padding: 10px;
+                  "
+                >
                   Outsourcing accounting tasks to us optimizes CA expertise
                   utilization, facilitating more tax audits without compromising
                   quality, averting delays, and maintaining excellence.
                 </p>
               </div>
+
               <div
                 class="read-more"
                 style="display: flex; justify-content: flex-end"
@@ -455,19 +436,64 @@
               </div>
             </div>
           </div>
+
           <div
             class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate"
+            style="overflow: visible"
           >
             <div
-              class="sub-block"
-              style="display: flex; flex-direction: column; flex-wrap: wrap"
+              class="sub-block position-relative"
+              style="
+                overflow: visible;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                position: relative;
+              "
             >
-              <div class="icon d-flex mr-2">
-                <span class="flaticon-loan"></span>
+              <!-- Element positioned outside the top-left corner with image overflow -->
+              <div
+                class="outside-element"
+                style="
+                  position: absolute;
+                  top: -30px;
+                  left: -55px;
+                  overflow: visible;
+                  z-index: 0;
+                  height: 20%;
+                "
+              >
+                <img
+                  src="images/003-boss.png"
+                  alt=""
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    z-index: -1;
+                    filter: blur(0.8px);
+                  "
+                />
               </div>
-              <div class="media-body">
-                <h3 class="heading">Business Owner</h3>
-                <p style="font-family: Circularstd Book">
+
+              <div class="media-body" style="position: relative; z-index: 1">
+                <h3
+                  class="heading"
+                  style="
+                    background-color: rgba(255, 255, 255, 0.7);
+                    padding: 10px;
+                  "
+                >
+                  Business Owner
+                </h3>
+                <p
+                  style="
+                    font-family: Circularstd Book;
+                    background-color: rgba(255, 255, 255, 0.7);
+                    padding: 10px;
+                  "
+                >
                   Our cost-effective accounting services require no year-round
                   commitment, offering savings of up to 1/3, allowing you to
                   focus on core business functions while we handle your
@@ -489,25 +515,71 @@
               </div>
             </div>
           </div>
+
           <div
             class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate"
+            style="overflow: visible"
           >
             <div
-              class="sub-block"
-              style="display: flex; flex-direction: column; flex-wrap: wrap"
+              class="sub-block position-relative"
+              style="
+                overflow: visible;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                position: relative;
+              "
             >
-              <div class="icon d-flex mr-2">
-                <span class="flaticon-tax"></span>
+              <!-- Element positioned outside the top-left corner with image overflow -->
+              <div
+                class="outside-element"
+                style="
+                  position: absolute;
+                  top: -30px;
+                  left: -55px;
+                  overflow: visible;
+                  z-index: 0;
+                  height: 20%;
+                "
+              >
+                <img
+                  src="images/002-office-building.png"
+                  alt=""
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    z-index: -1;
+                    filter: blur(0.8px);
+                  "
+                />
               </div>
-              <div class="media-body">
-                <h3 class="heading">Accounting Personnel & Firms</h3>
-                <p style="font-family: Circularstd Book">
+
+              <div class="media-body" style="position: relative; z-index: 1">
+                <h3
+                  class="heading"
+                  style="
+                    background-color: rgba(255, 255, 255, 0.7);
+                    padding: 10px;
+                  "
+                >
+                  Accounting Personnel & Firms
+                </h3>
+                <p
+                  style="
+                    font-family: Circularstd Book;
+                    background-color: rgba(255, 255, 255, 0.7);
+                    padding: 10px;
+                  "
+                >
                   Our scalable services eliminate the need for excess capacity,
                   enabling business growth without added overhead costs. Enhance
                   client engagements and reputation with our client-pleasing
                   reports.
                 </p>
               </div>
+
               <div
                 class="read-more"
                 style="display: flex; justify-content: flex-end"
@@ -522,25 +594,71 @@
               </div>
             </div>
           </div>
+
           <div
             class="col-md-6 col-lg-3 d-flex services align-self-stretch px-4 ftco-animate"
+            style="overflow: visible"
           >
             <div
-              class="sub-block"
-              style="display: flex; flex-direction: column; flex-wrap: wrap"
+              class="sub-block position-relative"
+              style="
+                overflow: visible;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                position: relative;
+              "
             >
-              <div class="icon d-flex mr-2">
-                <span class="flaticon-loan"></span>
+              <!-- Element positioned outside the top-left corner with image overflow -->
+              <div
+                class="outside-element"
+                style="
+                  position: absolute;
+                  top: -30px;
+                  left: -55px;
+                  overflow: visible;
+                  z-index: 0;
+                  height: 20%;
+                "
+              >
+                <img
+                  src="images/004-personnel-data.png"
+                  alt=""
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: relative;
+                    z-index: -1;
+                    filter: blur(0.8px);
+                  "
+                />
               </div>
-              <div class="media-body">
-                <h3 class="heading">Professional Affiliates</h3>
-                <p style="font-family: Circularstd Book">
+
+              <div class="media-body" style="position: relative; z-index: 1">
+                <h3
+                  class="heading"
+                  style="
+                    background-color: rgba(255, 255, 255, 0.7);
+                    padding: 10px;
+                  "
+                >
+                  Professional Affiliates
+                </h3>
+                <p
+                  style="
+                    font-family: Circularstd Book;
+                    background-color: rgba(255, 255, 255, 0.7);
+                    padding: 10px;
+                  "
+                >
                   Future aspirants can boost their practice effortlessly with
                   extra stipends by using our discounted services to manage
                   books of new clients and ensuring quality compliance from
                   onset.
                 </p>
               </div>
+
               <div
                 class="read-more"
                 style="display: flex; justify-content: flex-end"
@@ -567,10 +685,7 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong
-                  class="number"
-                  data-number="48"
-                  style="color: #062D60"
+                <strong class="number" data-number="48" style="color: #062d60"
                   >0</strong
                 >
               </div>
@@ -584,10 +699,7 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong
-                  class="number"
-                  data-number="7"
-                  style="color: #062D60"
+                <strong class="number" data-number="7" style="color: #062d60"
                   >0</strong
                 >
               </div>
@@ -601,10 +713,7 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong
-                  class="number"
-                  data-number="7"
-                  style="color: #062D60"
+                <strong class="number" data-number="7" style="color: #062d60"
                   >0</strong
                 >
               </div>
@@ -618,10 +727,7 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong
-                  class="number"
-                  data-number="3"
-                  style="color: #062D60"
+                <strong class="number" data-number="3" style="color: #062d60"
                   >0</strong
                 >
               </div>
@@ -635,10 +741,7 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong
-                  class="number"
-                  data-number="4"
-                  style="color: #062D60"
+                <strong class="number" data-number="4" style="color: #062d60"
                   >0</strong
                 >
               </div>
@@ -652,10 +755,7 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong
-                  class="number"
-                  data-number="6"
-                  style="color: #062D60"
+                <strong class="number" data-number="6" style="color: #062d60"
                   >0</strong
                 >
               </div>
@@ -669,10 +769,7 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong
-                  class="number"
-                  data-number="2"
-                  style="color: #062D60"
+                <strong class="number" data-number="2" style="color: #062d60"
                   >0</strong
                 >
               </div>
@@ -686,10 +783,7 @@
           >
             <div class="block-18 text-center">
               <div class="text">
-                <strong
-                  class="number"
-                  data-number="5"
-                  style="color: #062D60"
+                <strong class="number" data-number="5" style="color: #062d60"
                   >0</strong
                 >
               </div>
@@ -757,9 +851,7 @@
                       "I learnt about Finkeep from a friend joined the monthly
                       membership subscription. I no longer worry about
                       correctness and completion on time, don’t have to take
-                      care of the hassle of changing and finding accountants. My
-                      shop is audit ready and my mind is at peace all thanks to
-                      finkeep!"
+                      care of the hassle of changing and finding accountants."
                     </p>
                     <div class="d-flex align-items-center">
                       <div
@@ -784,10 +876,10 @@
                   </div>
                   <div class="text">
                     <p class="mb-4">
-                      "After partnering with Finkeep we don’t have to worry
-                      about the unavailability of accountants and their extra
-                      charges. All my accounts run smoothly doing accounting to
-                      audit was never this quick or easier."
+                      "Introduced to Finkeep by a friend, I joined the monthly
+                      subscription, eliminating worries about correctness and
+                      completion. No more hassle changing accountants; my shop
+                      is audit-ready."
                     </p>
                     <div class="d-flex align-items-center">
                       <div
@@ -814,25 +906,30 @@
     >
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
-            <div class="img-faqs w-100">
-              <div
-                class="img mb-4 mb-sm-0"
-                style="background-image: url(images/about-2.jpg)"
-              ></div>
-              <div
-                class="img img-2 mb-4 mb-sm-0"
-                style="background-image: url(images/about-1.jpg)"
-              ></div>
-            </div>
+          <div
+            class="col-lg-6 d-flex justify-content-center align-items-center"
+            style="padding-top: 50px;"
+          >
+            <!-- Image on the left -->
+            <div
+              style="
+                background-image: url(images/FAQ_image.jpg);
+                background-size: cover;
+                width: 600px;
+                height: 400px;
+                background-position: center;
+                margin-bottom: auto;
+              "
+            ></div>
           </div>
+
           <div class="col-lg-6 pl-lg-5">
             <div class="heading-section mb-5 mt-5 mt-lg-0">
               <span class="subheading" style="color: rgb(21, 96, 209)"
                 >FAQs</span
               >
               <h2 class="mb-3" style="color: rgb(21, 96, 209)">
-                Frequently Asks Questions
+                Frequently Asked Questions
               </h2>
             </div>
             <div
@@ -840,18 +937,17 @@
               class="myaccordion w-100"
               aria-multiselectable="true"
             >
+              <!-- Question 1 -->
               <div class="faq-item">
-                <div class="card-header p-0">
-                  <div
-                    class="faq-question"
-                    style="color: white; border-radius: 30px; padding: 10px"
-                    onclick="toggleAnswer('faq1')"
-                  >
-                    <h2>How does your AI system handle suspense entries?</h2>
-                  </div>
+                <div
+                  class="faq-question"
+                  data-toggle="collapse"
+                  data-target="#faq1"
+                  data-parent="#accordion"
+                >
+                  <h2>How does your AI system handle suspense entries?</h2>
                 </div>
-
-                <div id="faq1" class="faq-answer">
+                <div id="faq1" class="faq-answer collapse">
                   <div class="card-body py-3 px-0">
                     <ol>
                       <li>
@@ -869,20 +965,22 @@
                 </div>
               </div>
 
+              <!-- Question 2 -->
               <div class="faq-item">
                 <div
                   class="faq-question"
-                  style="color: white; border-radius: 30px; padding: 10px"
-                  onclick="toggleAnswer('faq2')"
+                  data-toggle="collapse"
+                  data-target="#faq2"
+                  data-parent="#accordion"
                 >
                   <h2>
                     How do you streamline and minimize the back-and-forth
                     communication between your accounting team and the client?
                   </h2>
                 </div>
-                <div id="faq2" class="faq-answer">
+                <div id="faq2" class="faq-answer collapse">
                   <div class="card-body py-3 px-0">
-                    <p style="font-family: Circularstd Book">
+                    <p>
                       We have established a structured operational protocol
                       within our organization to minimize unnecessary
                       back-and-forth communication between our team and clients.
@@ -907,17 +1005,19 @@
                 </div>
               </div>
 
+              <!-- Question 3 -->
               <div class="faq-item">
                 <div
                   class="faq-question"
-                  style="color: white; border-radius: 30px; padding: 10px"
-                  onclick="toggleAnswer('faq3')"
+                  data-toggle="collapse"
+                  data-target="#faq3"
+                  data-parent="#accordion"
                 >
                   <h2>
                     How do you guarantee the security of sensitive information?
                   </h2>
                 </div>
-                <div id="faq3" class="faq-answer">
+                <div id="faq3" class="faq-answer collapse">
                   <div class="card-body py-3 px-0">
                     <ol>
                       <li>
@@ -928,7 +1028,7 @@
                       <li>
                         Secure Data Storage: Client data is exclusively stored
                         on their OneDrive accounts or on our local network.
-                        Access to these drives are granted to us, ensuring that
+                        Access to these drives is granted to us, ensuring that
                         data remains securely within the client's controlled
                         environment. This setup minimizes the risk of
                         unauthorized access.
@@ -938,17 +1038,19 @@
                 </div>
               </div>
 
+              <!-- Question 4 -->
               <div class="faq-item">
                 <div
                   class="faq-question"
-                  style="color: white; border-radius: 30px; padding: 10px"
-                  onclick="toggleAnswer('faq4')"
+                  data-toggle="collapse"
+                  data-target="#faq4"
+                  data-parent="#accordion"
                 >
                   <h2>How do you verify the precision of the data?</h2>
                 </div>
-                <div id="faq4" class="faq-answer">
+                <div id="faq4" class="faq-answer collapse">
                   <div class="card-body py-3 px-0">
-                    <p style="font-family: Circularstd Book">
+                    <p>
                       We uphold rigorous quality standards to ensure the
                       precision of our data:
                     </p>
@@ -964,11 +1066,6 @@
                         maintain accuracy and compliance.
                       </li>
                       <li>
-                        Technology Assistance: Leveraging advanced technology,
-                        we significantly reduce accounting errors, contributing
-                        to data accuracy.
-                      </li>
-                      <li>
                         Autonomous Bots: We are in the process of implementing
                         autonomous bots for data validation, further enhancing
                         the accuracy of our reports.
@@ -978,15 +1075,17 @@
                 </div>
               </div>
 
+              <!-- Question 5 -->
               <div class="faq-item">
                 <div
                   class="faq-question"
-                  style="color: white; border-radius: 30px; padding: 10px"
-                  onclick="toggleAnswer('faq5')"
+                  data-toggle="collapse"
+                  data-target="#faq5"
+                  data-parent="#accordion"
                 >
                   <h2>How do you ensure the quality of your workforce?</h2>
                 </div>
-                <div id="faq5" class="faq-answer">
+                <div id="faq5" class="faq-answer collapse">
                   <div class="card-body py-3 px-0">
                     <ol>
                       <li>
@@ -1101,12 +1200,6 @@
                               >Contact us</a
                             >
                           </li>
-                          <!-- <li>
-                            <a href="#" class="py-1 d-block"
-                              >Terms &amp; Conditions</a
-                            >
-                          </li> -->
-                          <!-- <li><a href="#" class="py-1 d-block">Policies</a></li> -->
                         </ul>
                       </div>
                     </div>
@@ -1126,26 +1219,6 @@
                 />
               </div>
               <div class="form-group">
-                <script>
-                  // Function to open the dialog box
-                  function openDialog() {
-                    document.getElementById("dialogBox").style.display =
-                      "block";
-                    document.getElementById("overlay").style.display = "block";
-                  }
-
-                  // Function to close the dialog box
-                  function closeDialog() {
-                    document.getElementById("dialogBox").style.display = "none";
-                    document.getElementById("overlay").style.display = "none";
-                  }
-
-                  // Attach the click event to the button
-                  document
-                    .getElementById("openDialogBtn")
-                    .addEventListener("click", openDialog);
-                </script>
-
                 <textarea
                   name=""
                   id=""
@@ -1166,30 +1239,9 @@
       </div>
     </footer>
 
-    <script>
-      function toggleAnswer(faqId) {
-        var answerDiv = document.getElementById(faqId);
-        var allAnswers = document.getElementsByClassName("faq-answer");
-
-        // Close all other FAQ items
-        for (var i = 0; i < allAnswers.length; i++) {
-          if (allAnswers[i].id !== faqId) {
-            allAnswers[i].classList.remove("show");
-          }
-        }
-
-        // Toggle the clicked FAQ item
-        if (answerDiv.classList.contains("show")) {
-          answerDiv.classList.remove("show");
-        } else {
-          answerDiv.classList.add("show");
-        }
-      }
-    </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
@@ -1200,55 +1252,21 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script> -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-
-    <script>
-      // Function to open the dialog box
-      function openDialog() {
-        document.getElementById("dialogBox").style.display = "block";
-        document.getElementById("overlay").style.display = "block";
-      }
-
-      // Function to close the dialog box
-      function closeDialog() {
-        document.getElementById("dialogBox").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
-      }
-
-      // Function to submit the form (you can customize this function)
-      function submitForm() {
-        // Add your form submission logic here
-        alert("Form submitted!");
-        closeDialog();
-      }
-
-      // Attach the click event to the button
-      document
-        .getElementById("openDialogBtn")
-        .addEventListener("click", openDialog);
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <script>
       $(document).ready(function () {
+        // Initial image source and dimensions
+        var initialImageSrc = "images/8.png";
+        var initialWidth = "100%";
+        var initialHeight = "60%";
+
+        // Set initial image source and dimensions on page load
+        $("#logoImage").attr("src", initialImageSrc).css({
+          width: initialWidth,
+          height: initialHeight,
+          "object-fit": "contain",
+        });
+
         $(window).scroll(function () {
           // Check if the scroll position is greater than 50px
           if ($(this).scrollTop() > 50) {
@@ -1256,28 +1274,36 @@
             $("#ftco-navbar").css({
               "background-color": "#062d60",
             });
-    
-            // Change text color of nav links and navbar brand to white
-            $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "white");
-    
-            // Change the logo image on scroll
-            $(".navbar-brand img").attr("src", "images/Finkeep.png");
+
+            // Change text color of nav links to white
+            $("#ftco-nav a").css("color", "white");
+
+            // Change the logo image source and set fixed dimensions on scroll
+            $("#logoImage").attr("src", "images/7.png").css({
+              width: initialWidth,
+              height: initialHeight,
+              "object-fit": "contain",
+            });
           } else {
             // Reset background color
             $("#ftco-navbar").css({
-              "background-color": "white",
+              "background-color": "transparent",
             });
-    
-            // Reset text color of nav links and navbar brand to black (or your default color)
-            $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "black");
-    
-            // Reset the logo image when scrolling back to the top
-            $(".navbar-brand img").attr("src", "images/finkeep_blue.png");
+
+            // Reset text color of nav links to black
+            $("#ftco-nav a").css("color", "#000");
+
+            // Reset the logo image source and set fixed dimensions when scrolling back to the top
+            $("#logoImage").attr("src", initialImageSrc).css({
+              width: initialWidth,
+              height: initialHeight,
+              "object-fit": "contain",
+            });
           }
         });
-    
+
         // Add hover effect to text with light blue color
-        $("#ftco-nav a, #ftco-navbar .navbar-brand").hover(
+        $("#ftco-nav a").hover(
           function () {
             $(this).css("color", "#0A5AC2"); // Change text color on hover to light blue
           },
@@ -1286,12 +1312,21 @@
             if ($(window).scrollTop() > 50) {
               $(this).css("color", "white");
             } else {
-              $(this).css("color", "black");
+              $(this).css("color", "#000");
             }
           }
         );
       });
     </script>
-    
+
+    <script>
+      $(document).ready(function () {
+        // Collapse other questions when one is opened
+        $(".faq-question").on("click", function () {
+          $(".faq-question").not(this).removeClass("collapsed");
+          $(".faq-question").not(this).attr("aria-expanded", "false");
+        });
+      });
+    </script>
   </body>
 </html>

@@ -59,49 +59,65 @@
     </style>
   </head>
   <body>
-     <nav
-      class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light sticky-top"
-      id="ftco-navbar"
-    >
-      <div class="container">
-        <div class="navbar-brand" >
-          <img
-            src="../images/Finkeep.png"
-            alt=""
-            class="image"
-            cover
-          />
-        </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#ftco-nav"
-          aria-controls="ftco-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="fa fa-bars"></span> Menu
-        </button>
-        <div class="collapse navbar-collapse" id="ftco-nav" >
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item">
-              <a href="../index.html" class="nav-link" >Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="../about.html" class="nav-link" >About</a>
-            </li>
-            <li class="nav-item">
-              <a href="../services.html" class="nav-link">Product Bundles</a>
-            </li>
-            <li class="nav-item">
-              <a href="../contact.html" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </div>
+    <nav
+    class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light sticky-top"
+    id="ftco-navbar"
+  >
+    <div class="container">
+      <div class="logo-container">
+        <img id="logoImage" alt="Logo" />
       </div>
-    </nav>
-    <!-- END nav -->
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#ftco-nav"
+        aria-controls="ftco-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="fa fa-bars"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav m-auto">
+          <li
+            class="nav-item1"
+            style="
+              list-style: none;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 60px;
+            "
+          >
+            <a
+              href="../index.html"
+              style="text-decoration: none"
+              class="nav-link1"
+            >
+              <img
+                src="../images/home-button.png"
+                alt="Home Button"
+                style="height: 100%; width: 80%"
+              />
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="../about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="../services.html" class="nav-link">Offerings</a>
+          </li>
+          <li class="nav-item">
+            <a href="../contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
     <!-- Big Title -->
     <div class="container mt-5 text-center">
       <h1 class="display-4">Numbers, Trust, Growth.</h1>
@@ -406,6 +422,18 @@
     ></script>
     <script>
       $(document).ready(function () {
+        // Initial image source and dimensions
+        var initialImageSrc = "../images/8.png";
+        var initialWidth = "100%";
+        var initialHeight = "60%";
+
+        // Set initial image source and dimensions on page load
+        $("#logoImage").attr("src", initialImageSrc).css({
+          width: initialWidth,
+          height: initialHeight,
+          "object-fit": "contain",
+        });
+
         $(window).scroll(function () {
           // Check if the scroll position is greater than 50px
           if ($(this).scrollTop() > 50) {
@@ -413,28 +441,36 @@
             $("#ftco-navbar").css({
               "background-color": "#062d60",
             });
-    
-            // Change text color of nav links and navbar brand to white
-            $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "white");
-    
-            // Change the logo image on scroll
-            $(".navbar-brand img").attr("src", "../images/Finkeep.png");
+
+            // Change text color of nav links to white
+            $("#ftco-nav a").css("color", "white");
+
+            // Change the logo image source and set fixed dimensions on scroll
+            $("#logoImage").attr("src", "../images/7.png").css({
+              width: initialWidth,
+              height: initialHeight,
+              "object-fit": "contain",
+            });
           } else {
             // Reset background color
             $("#ftco-navbar").css({
-              "background-color": "white",
+              "background-color": "transparent",
             });
-    
-            // Reset text color of nav links and navbar brand to black (or your default color)
-            $("#ftco-nav a, #ftco-navbar .navbar-brand").css("color", "black");
-    
-            // Reset the logo image when scrolling back to the top
-            $(".navbar-brand img").attr("src", "../images/finkeep_blue.png");
+
+            // Reset text color of nav links to black
+            $("#ftco-nav a").css("color", "#000");
+
+            // Reset the logo image source and set fixed dimensions when scrolling back to the top
+            $("#logoImage").attr("src", initialImageSrc).css({
+              width: initialWidth,
+              height: initialHeight,
+              "object-fit": "contain",
+            });
           }
         });
-    
+
         // Add hover effect to text with light blue color
-        $("#ftco-nav a, #ftco-navbar .navbar-brand").hover(
+        $("#ftco-nav a").hover(
           function () {
             $(this).css("color", "#0A5AC2"); // Change text color on hover to light blue
           },
@@ -443,7 +479,7 @@
             if ($(window).scrollTop() > 50) {
               $(this).css("color", "white");
             } else {
-              $(this).css("color", "black");
+              $(this).css("color", "#000");
             }
           }
         );
