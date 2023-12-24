@@ -4649,7 +4649,7 @@ image1 {
   .navbar-nav {
     -ms-flex-direction: column;
     flex-direction: column;
-    background-color: red;
+    /* background-color: red; */
   }
 
   .navbar-nav .nav-item {
@@ -4669,7 +4669,8 @@ image1 {
 
   .navbar-toggler {
     text-align: center;
-    margin: 0 auto;
+    margin-left: 0 auto;
+
     /* Adjust the margin as needed */
   }
 
