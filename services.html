@@ -579,6 +579,7 @@
         // Hypothetical calculation logic
         const dropdown1Value = document.getElementById("dropdown1").value;
         const dropdown2Value = document.getElementById("dropdown2").value;
+        console.log(dropdown1Value, dropdown2Value)
 
         // Handles Business Owner
         if (
@@ -586,7 +587,7 @@
           dropdown2Value == "Upto 500"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is INR 4999.00`; // Replace XXX with the calculated value
+          const result = `Your quote for transactions upto ${dropdown2Value} is INR 4999.00. For every extra 250 transactions a fee of INR 850 will be charged.`; // Replace XXX with the calculated value
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
@@ -595,7 +596,7 @@
           dropdown2Value == "1000"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is INR  9,999.00 `; // Replace XXX with the calculated value
+          const result = `Your quote for transactions upto ${dropdown2Value} is INR 9,999.00. For every extra 500 transactions a fee of INR 850 will be charged.`; // Replace XXX with the calculated value
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
@@ -604,7 +605,7 @@
           dropdown2Value == "5000"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is INR  14,999.00 `; // Replace XXX with the calculated value
+          const result = `Your quote for transactions upto ${dropdown2Value} is INR 14,999.00. For every extra 500 transactions a fee of INR 850 will be charged.`; // Replace XXX with the calculated value
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
@@ -613,11 +614,12 @@
           dropdown2Value == "More than 5000"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is Not  Available`; // Replace XXX with the calculated value  CHECK HERERRRRR =================
+          const result = `Please contact us on +919823197963 or send us an email on sales@finkeep.in. Our sales team will reach out to you for further discussion.`; // Replace XXX with the calculated value  CHECK HERERRRRR =================
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
         }
+
 
 
         // handles CA/CS/CWA
@@ -626,25 +628,19 @@
           dropdown2Value == "Upto 500"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is INR  2,499.50 `; // Replace XXX with the calculated value
+          const result = `Your quote for transactions upto ${dropdown2Value} is INR 2,499.50. For every extra 250 transactions a fee of INR 425 will be charged.`; // Replace XXX with the calculated value
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
-        } else if (
-          dropdown1Value == "CA/CS/CWA" &&
-          dropdown2Value == "1000"
-        ) {
+        } else if (dropdown1Value == "CA/CS/CWA" && dropdown2Value == "1000") {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is INR   4,999.50 `; // Replace XXX with the calculated value
+          const result = `Your quote for transactions upto ${dropdown2Value} is INR 4,999.50. For every extra 500 transactions a fee of INR 425 will be charged.`; // Replace XXX with the calculated value
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
-        } else if (
-          dropdown1Value == "CA/CS/CWA" &&
-          dropdown2Value == "5000"
-        ) {
+        } else if (dropdown1Value == "CA/CS/CWA" && dropdown2Value == "5000") {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is INR   7,499.50  `; // Replace XXX with the calculated value
+          const result = `Your quote for transactions upto ${dropdown2Value} is INR 7,499.50. For every extra 500 transactions a fee of INR 425 will be charged.`; // Replace XXX with the calculated value
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
@@ -653,7 +649,7 @@
           dropdown2Value == "More than 5000"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is Not  Available`; // Replace XXX with the calculated value  CHECK HERERRRRR =================
+          const result = `Please contact us on +919823197963 or send us an email on sales@finkeep.in. Our sales team will reach out to you for further discussion.`; // Replace XXX with the calculated value  CHECK HERERRRRR =================
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
@@ -661,50 +657,51 @@
 
         // Professional Firm of accountants/ Tax practitioner
         else if (
-          dropdown1Value == "Professional Firm of accountants/ Tax practitioner" &&
+          dropdown1Value ==
+            "Professional Firm of accountants/ Tax practitioner" &&
           dropdown2Value == "Upto 500"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is INR   4,999.00`; // Replace XXX with the calculated value
+          const result = `Your quote for transactions upto ${dropdown2Value} is INR 4999.00. For every extra 250 transactions a fee of INR 850 will be charged.`; // Replace XXX with the calculated value
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
         } else if (
-          dropdown1Value == "Professional Firm of accountants/ Tax practitioner" &&
+          dropdown1Value ==
+            "Professional Firm of accountants/ Tax practitioner" &&
           dropdown2Value == "1000"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is INR    9,999.00`; // Replace XXX with the calculated value
+          const result = `Your quote for transactions upto ${dropdown2Value} is INR 9,999.00. For every extra 500 transactions a fee of INR 850 will be charged.`; // Replace XXX with the calculated value
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
         } else if (
-          dropdown1Value == "Professional Firm of accountants/ Tax practitioner" &&
+          dropdown1Value ==
+            "Professional Firm of accountants/ Tax practitioner" &&
           dropdown2Value == "5000"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is INR    14,999.00`; // Replace XXX with the calculated value
+          const result = `Your quote for transactions upto ${dropdown2Value} is INR 14,999.00. For every extra 500 transactions a fee of INR 850 will be charged.`; // Replace XXX with the calculated value
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
         } else if (
-          dropdown1Value == "Professional Firm of accountants/ Tax practitioner" &&
+          dropdown1Value ==
+            "Professional Firm of accountants/ Tax practitioner" &&
           dropdown2Value == "More than 5000"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is Not  Available`; // Replace XXX with the calculated value  CHECK HERERRRRR =================
+          const result = `Please contact us on +919823197963 or send us an email on sales@finkeep.in. Our sales team will reach out to you for further discussion.`; // Replace XXX with the calculated value  CHECK HERERRRRR =================
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
-        }
-        
-
-        else if (
+        } else if (
           dropdown1Value == "Professional Affiliates (students of CA/CS/CWA)" &&
           dropdown2Value == "Upto 500"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is INR  2,499.50 `; // Replace XXX with the calculated value
+          const result = `Your quote for transactions upto ${dropdown2Value} is INR  2,499.50. For every extra 250 transactions a fee of INR 425 will be charged.`; // Replace XXX with the calculated value
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
@@ -713,7 +710,7 @@
           dropdown2Value == "1000"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is INR   4,999.50 `; // Replace XXX with the calculated value
+          const result = `Your quote for transactions upto ${dropdown2Value} is INR  4,999.50. For every extra 500 transactions a fee of INR 425 will be charged.`; // Replace XXX with the calculated value
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
@@ -722,7 +719,7 @@
           dropdown2Value == "5000"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is INR   7,499.50  `; // Replace XXX with the calculated value
+          const result = `Your quote for transactions upto ${dropdown2Value} is INR  7,499.50. For every extra 500 transactions a fee of INR 425 will be charged.`; // Replace XXX with the calculated value
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
@@ -731,16 +728,11 @@
           dropdown2Value == "More than 5000"
         ) {
           // Perform your calculation based on the selected values
-          const result = `Your quote for ${dropdown1Value} and ${dropdown2Value} is Not  Available`; // Replace XXX with the calculated value  CHECK HERERRRRR =================
+          const result = `Please contact us on +919823197963 or send us an email on sales@finkeep.in. Our sales team will reach out to you for further discussion.`; // Replace XXX with the calculated value  CHECK HERERRRRR =================
 
           // Display the result
           document.getElementById("quoteResult").innerHTML = `<p>${result}</p>`;
-        }
-
-
-
-        
-         else {
+        } else {
           // Display an error message if selections are not valid
           document.getElementById("quoteResult").innerHTML =
             "<p>Please select valid options for both dropdowns.</p>";
