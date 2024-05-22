@@ -84,7 +84,7 @@
               <a href="about.html" class="nav-link">About</a>
             </li>
             <li class="nav-item">
-              <a href="services.html" class="nav-link">Offerings</a>
+              <a href="services.html" class="nav-link">Services</a>
             </li>
             <li class="nav-item">
               <a href="contact.html" class="nav-link">Contact Us</a>
@@ -128,81 +128,126 @@
                 >
                   <div class="contact-wrap w-100 p-md-5 p-4"> 
                     <h3 class="mb-4">Get in touch</h3>
-                    <div id="form-message-warning" class="mb-4"></div>
-                    <div id="form-message-success" class="mb-4">
-                      Your message was sent, thank you!
-                    </div>
-                    <form
-                      method="POST"
-                      id="contactForm"
-                      name="contactForm"
-                      class="contactForm"
-                    >
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label class="label" for="name">Full Name</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="name"
-                              id="name"
-                              placeholder="Name"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label class="label" for="email"
-                              >Email Address</label
-                            >
-                            <input
-                              type="email"
-                              class="form-control"
-                              name="email"
-                              id="email"
-                              placeholder="Email"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label class="label" for="subject">Subject</label>
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="subject"
-                              id="subject"
-                              placeholder="Subject"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label class="label" for="#">Message</label>
-                            <textarea
-                              name="message"
-                              class="form-control"
-                              id="message"
-                              cols="30"
-                              rows="4"
-                              placeholder="Message"
-                            ></textarea>
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <input
-                              type="submit"
-                              value="Send Message"
-                              class="btn btn-primary"
-                              
-                            />  
-                            <div class="submitting"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
+                
+                    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mnqeynqn" method="post">
+                      <fieldset id="fs-frm-inputs">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                        <label for="email-address">Email Address</label>
+                        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+                        <label for="message">Message</label>
+                        <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                      </fieldset>
+                      <input type="submit" value="Submit">
+                    </form><style>/* reset */
+                    #fs-frm input,
+                    #fs-frm select,
+                    #fs-frm textarea,
+                    #fs-frm fieldset,
+                    #fs-frm optgroup,
+                    #fs-frm label,
+                    #fs-frm #card-element:disabled {
+                      font-family: inherit;
+                      font-size: 100%;
+                      color: inherit;
+                      border: none;
+                      border-radius: 0;
+                      display: block;
+                      width: 100%;
+                      padding: 0;
+                      margin: 0;
+                      -webkit-appearance: none;
+                      -moz-appearance: none;
+                    }
+                    #fs-frm label,
+                    #fs-frm legend,
+                    #fs-frm ::placeholder {
+                      font-size: .825rem;
+                      margin-bottom: .5rem;
+                      padding-top: .2rem;
+                      display: flex;
+                      align-items: baseline;
+                    }
+                    
+                    /* border, padding, margin, width */
+                    #fs-frm input,
+                    #fs-frm select,
+                    #fs-frm textarea,
+                    #fs-frm #card-element {
+                      border: 1px solid rgba(0,0,0,0.2);
+                      background-color: rgba(255,255,255,0.9);
+                      padding: .75em 1rem;
+                      margin-bottom: 1.5rem;
+                    }
+                    #fs-frm input:focus,
+                    #fs-frm select:focus,
+                    #fs-frm textarea:focus {
+                      background-color: white;
+                      outline-style: solid;
+                      outline-width: thin;
+                      outline-color: gray;
+                      outline-offset: -1px;
+                    }
+                    #fs-frm [type="text"],
+                    #fs-frm [type="email"] {
+                      width: 100%;
+                    }
+                    #fs-frm [type="button"],
+                    #fs-frm [type="submit"],
+                    #fs-frm [type="reset"] {
+                      width: auto;
+                      cursor: pointer;
+                      -webkit-appearance: button;
+                      -moz-appearance: button;
+                      appearance: button;
+                    }
+                    #fs-frm [type="button"]:focus,
+                    #fs-frm [type="submit"]:focus,
+                    #fs-frm [type="reset"]:focus {
+                      outline: none;
+                    }
+                    #fs-frm [type="submit"],
+                    #fs-frm [type="reset"] {
+                      margin-bottom: 0;
+                    }
+                    #fs-frm select {
+                      text-transform: none;
+                    }
+                    
+                    #fs-frm [type="checkbox"] {
+                      -webkit-appearance: checkbox;
+                      -moz-appearance: checkbox;
+                      appearance: checkbox;
+                      display: inline-block;
+                      width: auto;
+                      margin: 0 .5em 0 0 !important;
+                    }
+                    
+                    #fs-frm [type="radio"] {
+                      -webkit-appearance: radio;
+                      -moz-appearance: radio;
+                      appearance: radio;
+                    }
+                    
+                    /* address, locale */
+                    #fs-frm fieldset.locale input[name="city"],
+                    #fs-frm fieldset.locale select[name="state"],
+                    #fs-frm fieldset.locale input[name="postal-code"] {
+                      display: inline;
+                    }
+                    #fs-frm fieldset.locale input[name="city"] {
+                      width: 52%;
+                    }
+                    #fs-frm fieldset.locale select[name="state"],
+                    #fs-frm fieldset.locale input[name="postal-code"] {
+                      width: 20%;
+                    }
+                    #fs-frm fieldset.locale input[name="city"],
+                    #fs-frm fieldset.locale select[name="state"] {
+                      margin-right: 3%;
+                    }
+                    </style>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
@@ -212,23 +257,8 @@
                       We're open for any suggestion or just to have a chat
                     </p>
                     <div class="dbox w-100 d-flex align-items-start">
-                      <div
-                        class="icon d-flex align-items-center justify-content-center"
-                      >
-                        <span class="fa fa-map-marker"></span>
-                      </div>
-                      <div class="text pl-3">
-                        <p>
-                          <span>Address 1:</span> 2nd Floor, Indian Transport
-                          Plaza, Tawakal Layout, Wadi, Nagpur 440023
-                        </p>
-                      </div>
-                      <div class="text pl-3">
-                        <p>
-                          <span>Address 2:</span> 2/3E Panditya Road Hazra,
-                          Ballygunge Kolkata 700029
-                        </p>
-                      </div>
+                     
+                      
                     </div>
                     <div class="dbox w-100 d-flex align-items-center">
                       <div
@@ -239,7 +269,7 @@
                       <div class="text pl-3">
                         <p>
                           <span>Phone:</span>
-                          <a href="tel://1234567920">+91 9823197963</a>
+                          <a href="tel://1234567920">+1 321-662-9440</a>
                         </p>
                       </div>
                     </div>
@@ -253,7 +283,7 @@
                         <p>
                           <span>Email:</span>
                           <a href="mailto:info@yoursite.com"
-                            >sales@finkeep.in</a
+                            >hringer21@gmail.com</a
                           >
                         </p>
                       </div>
@@ -288,8 +318,7 @@
               <div class="col-md-4 mb-md-0 mb-4">
                 <h2 class="footer-heading">About us</h2>
                 <p>
-                  Finkeep is a new age , so that you can focus on your business
-                  and leave the rest to us, our experienced CAs and expert
+                  our expert
                   accountants offer customised reports on a regular basis,
                   assuring excellent accounting and compliance-ready books.
                 </p>
@@ -372,43 +401,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
-            <h2 class="footer-heading">Free consultation</h2>
-            <form action="#" class="form-consultation">
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Name"
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Email"
-                />
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" />
-              </div>
-              <div class="form-group">
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="3"
-                  class="form-control"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="form-control px-3 submit">
-                  Send A Message
-                </button>
-              </div>
-            </form>
-          </div>
+         
         </div>
       </div>
     </footer>
@@ -457,7 +450,7 @@
     <script>
       $(document).ready(function () {
         // Initial image source and dimensions
-        var initialImageSrc = "images/8.png";
+        var initialImageSrc = "logo.png";
         var initialWidth = "100%";
         var initialHeight = "60%";
 
@@ -480,7 +473,7 @@
             $("#ftco-nav a").css("color", "white");
 
             // Change the logo image source and set fixed dimensions on scroll
-            $("#logoImage").attr("src", "images/7.png").css({
+            $("#logoImage").attr("src", "logo.png").css({
               width: initialWidth,
               height: initialHeight,
               "object-fit": "contain",
